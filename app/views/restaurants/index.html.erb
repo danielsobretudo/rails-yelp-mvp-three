@@ -1,2 +1,24 @@
 <h1>Restaurants#index</h1>
-<p>Find me in app/views/restaurants/index.html.erb</p>
+<h3>Restaurants List</h3>
+<table class="table table-primary table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Restaurant id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Address</th>
+      <th scope="col">Category</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @restaurant.each do |restaurant| %>
+    <tr>
+      <th scope="row"><%= restaurant.id %></th>
+      <th><%= restaurant.name %></th>
+      <th><%= restaurant.address %></th>
+      <th><%= restaurant.category.capitalize %></th>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<p></p>
