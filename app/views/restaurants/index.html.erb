@@ -14,10 +14,10 @@
     <tbody>
       <% @restaurant.each do |restaurant| %>
       <tr>
-        <th scope="row"><%= restaurant.id %></th>
+        <th scope="row"><%= link_to restaurant.id, restaurant_path(restaurant) %></th>
         <th><%= restaurant.name %></th>
         <th><%= restaurant.address %></th>
-        <th><%= restaurant.phone_number.nil? ? "unavailable" : restaurant %></th>
+        <th><%= restaurant.phone_number.nil? ? "unavailable" : restaurant.phone_number %></th>
         <th><%= restaurant.category.capitalize %></th>
       </tr>
       <% end %>
