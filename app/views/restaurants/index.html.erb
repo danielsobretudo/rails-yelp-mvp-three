@@ -7,6 +7,7 @@
         <th scope="col">Restaurant id</th>
         <th scope="col">Name</th>
         <th scope="col">Address</th>
+        <th scope="col">Phone Number</th>
         <th scope="col">Category</th>
       </tr>
     </thead>
@@ -16,6 +17,7 @@
         <th scope="row"><%= restaurant.id %></th>
         <th><%= restaurant.name %></th>
         <th><%= restaurant.address %></th>
+        <th><%= restaurant.phone_number.nil? ? "unavailable" : restaurant %></th>
         <th><%= restaurant.category.capitalize %></th>
       </tr>
       <% end %>
